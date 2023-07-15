@@ -1,13 +1,14 @@
 import  PropTypes  from "prop-types";
 import { useState } from "react";
+
 export const CounterApp = ({value}) => {
   
   const [counter, setCounter] = useState(value);
   const sumar = () => 
-    setCounter( counter + 10 )
+    setCounter( counter + 1 )
   
   const restar = () => 
-    setCounter( counter - 10 )
+    setCounter( counter - 1 )
   
   const reset = () => 
     setCounter( value )
@@ -19,6 +20,7 @@ export const CounterApp = ({value}) => {
     <h1>{counter}</h1>
 
     <button 
+      aria-label="sumar"
       onClick={sumar}
     >
       +1
